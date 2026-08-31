@@ -1,0 +1,2064 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plugue | Eletrônicos e Acessórios</title>
+
+  <meta
+    name="description"
+    content="Plugue — eletrônicos e acessórios para deixar sua rotina mais prática."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* =========================
+       BARRA SUPERIOR
+    ========================= */
+
+    .top-bar {
+      background: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      height: 76px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      border-bottom: 1px solid #e5e7eb;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    .logo span {
+      color: #2563eb;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex: 1;
+    }
+
+    nav a {
+      color: #555;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search {
+      width: 200px;
+      padding: 11px 13px;
+
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: #2563eb;
+    }
+
+    .cart-button {
+      width: 43px;
+      height: 43px;
+
+      background: #f3f4f6;
+      border-radius: 10px;
+
+      font-size: 19px;
+
+      position: relative;
+    }
+
+    .cart-number {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+
+      width: 18px;
+      height: 18px;
+
+      background: #2563eb;
+      color: white;
+
+      border-radius: 50%;
+
+      font-size: 10px;
+      font-weight: bold;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 570px;
+
+      padding: 75px 6%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8fafc,
+          #edf4ff
+        );
+    }
+
+    .hero-label {
+      display: inline-block;
+
+      background: #e4edff;
+      color: #2563eb;
+
+      padding: 8px 13px;
+
+      border-radius: 30px;
+
+      font-size: 11px;
+      font-weight: bold;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+
+      font-size: clamp(45px, 6vw, 72px);
+
+      line-height: 1;
+
+      letter-spacing: -4px;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      max-width: 550px;
+
+      color: #667085;
+
+      font-size: 18px;
+
+      line-height: 1.6;
+
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .primary-button {
+      display: inline-block;
+
+      padding: 15px 22px;
+
+      background: #2563eb;
+      color: white;
+
+      border-radius: 11px;
+
+      font-size: 13px;
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .primary-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .secondary-button {
+      display: inline-block;
+
+      padding: 15px 22px;
+
+      background: white;
+
+      border: 1px solid #ddd;
+
+      border-radius: 11px;
+
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       HERO VISUAL
+    ========================= */
+
+    .hero-visual {
+      height: 400px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .circle {
+      width: 330px;
+      height: 330px;
+
+      background: #dbeafe;
+
+      border-radius: 50%;
+
+      position: absolute;
+    }
+
+    .phone {
+      width: 230px;
+      height: 340px;
+
+      padding: 12px;
+
+      background: #111827;
+
+      border-radius: 32px;
+
+      position: relative;
+
+      transform: rotate(-8deg);
+
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .phone-screen {
+      height: 100%;
+
+      border-radius: 23px;
+
+      background:
+        linear-gradient(
+          150deg,
+          #0f172a,
+          #2563eb
+        );
+
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      padding: 25px;
+    }
+
+    .phone-screen small {
+      opacity: 0.7;
+    }
+
+    .phone-screen strong {
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+    .floating {
+      position: absolute;
+
+      background: white;
+
+      padding: 14px 18px;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .floating.one {
+      top: 50px;
+      right: 5%;
+    }
+
+    .floating.two {
+      bottom: 55px;
+      left: 5%;
+    }
+
+    /* =========================
+       BENEFÍCIOS
+    ========================= */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+
+      padding: 25px 6%;
+
+      border-bottom: 1px solid #eee;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .benefit-icon {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 11px;
+
+      background: #edf3ff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 20px;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .benefit span {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    .section {
+      padding: 75px 6%;
+    }
+
+    .section-title {
+      font-size: 34px;
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       CATEGORIAS
+    ========================= */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .category {
+      min-height: 230px;
+
+      padding: 28px;
+
+      border-radius: 20px;
+
+      background: #f5f7fa;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category:nth-child(2) {
+      background: #edf4ff;
+    }
+
+    .category h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      max-width: 230px;
+
+      color: #777;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .category a {
+      position: absolute;
+      bottom: 25px;
+
+      color: #2563eb;
+
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .category-icon {
+      position: absolute;
+
+      right: 15px;
+      bottom: -15px;
+
+      font-size: 100px;
+
+      opacity: 0.15;
+    }
+
+    /* =========================
+       PRODUTOS
+    ========================= */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .product {
+      overflow: hidden;
+
+      background: white;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 18px;
+
+      transition: 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-image {
+      height: 230px;
+
+      background: #f6f7f9;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 75px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 5px 8px;
+
+      margin-bottom: 10px;
+
+      background: #eaf0ff;
+      color: #2563eb;
+
+      border-radius: 6px;
+
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .stars {
+      color: #f59e0b;
+
+      font-size: 12px;
+
+      margin-bottom: 8px;
+    }
+
+    .product h3 {
+      font-size: 15px;
+
+      margin-bottom: 8px;
+
+      min-height: 36px;
+    }
+
+    .old-price {
+      color: #999;
+
+      font-size: 12px;
+
+      text-decoration: line-through;
+    }
+
+    .price {
+      font-size: 22px;
+
+      font-weight: 900;
+
+      margin: 3px 0 15px;
+    }
+
+    .buy {
+      width: 100%;
+
+      padding: 12px;
+
+      background: #111;
+      color: white;
+
+      border-radius: 9px;
+
+      font-size: 12px;
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .buy:hover {
+      background: #2563eb;
+    }
+
+    /* =========================
+       OFERTA
+    ========================= */
+
+    .offer {
+      margin: 0 6% 75px;
+
+      padding: 55px 6%;
+
+      border-radius: 25px;
+
+      background: #111;
+
+      color: white;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      align-items: center;
+    }
+
+    .offer h2 {
+      max-width: 550px;
+
+      font-size: 43px;
+
+      letter-spacing: -2px;
+
+      margin: 12px 0;
+    }
+
+    .offer p {
+      max-width: 500px;
+
+      color: #aaa;
+
+      line-height: 1.6;
+
+      margin-bottom: 25px;
+    }
+
+    .offer-product {
+      text-align: center;
+
+      font-size: 140px;
+    }
+
+    /* =========================
+       SOBRE
+    ========================= */
+
+    .why {
+      padding: 75px 6%;
+
+      background: #f5f7fa;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 50px;
+    }
+
+    .why h2 {
+      font-size: 42px;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .why p {
+      color: #777;
+
+      line-height: 1.7;
+    }
+
+    .why-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+    }
+
+    .why-card {
+      padding: 22px;
+
+      background: white;
+
+      border-radius: 17px;
+    }
+
+    .why-card strong {
+      display: block;
+
+      margin-bottom: 8px;
+    }
+
+    .why-card span {
+      color: #777;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+    }
+
+    /* =========================
+       FRASE DA MARCA
+    ========================= */
+
+    .brand {
+      text-align: center;
+
+      padding: 90px 6%;
+    }
+
+    .brand h2 {
+      font-size: 48px;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .brand p {
+      max-width: 550px;
+
+      margin: 0 auto 25px;
+
+      color: #777;
+
+      line-height: 1.7;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+    .faq details {
+      padding: 20px 0;
+
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq summary {
+      cursor: pointer;
+
+      font-weight: bold;
+    }
+
+    .faq p {
+      color: #777;
+
+      line-height: 1.6;
+
+      margin-top: 12px;
+    }
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      padding: 60px 6%;
+
+      text-align: center;
+
+      background: #edf4ff;
+    }
+
+    .newsletter h2 {
+      font-size: 30px;
+
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      color: #777;
+
+      margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+      max-width: 500px;
+
+      margin: auto;
+
+      padding: 5px;
+
+      display: flex;
+
+      background: white;
+
+      border-radius: 12px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+
+      padding: 12px;
+
+      border: none;
+
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 12px 18px;
+
+      border-radius: 9px;
+
+      background: #2563eb;
+
+      color: white;
+
+      font-weight: bold;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 55px 6% 25px;
+
+      background: #111;
+
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+      gap: 30px;
+    }
+
+    .footer-logo {
+      font-size: 25px;
+
+      font-weight: 900;
+    }
+
+    .footer-logo span {
+      color: #60a5fa;
+    }
+
+    footer p {
+      color: #999;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      margin-top: 12px;
+    }
+
+    footer h4 {
+      font-size: 13px;
+
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      display: block;
+
+      color: #999;
+
+      font-size: 13px;
+
+      margin: 9px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 20px;
+
+      margin-top: 40px;
+
+      border-top: 1px solid #292929;
+
+      color: #777;
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       NOTIFICAÇÃO
+    ========================= */
+
+    .toast {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      padding: 14px 18px;
+
+      border-radius: 10px;
+
+      background: #111;
+      color: white;
+
+      opacity: 0;
+
+      transform: translateY(30px);
+
+      transition: 0.3s;
+
+      z-index: 500;
+    }
+
+    .toast.show {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .search {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding: 60px 5%;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .offer {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-product {
+        display: none;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .top-bar {
+        font-size: 11px;
+      }
+
+      header {
+        height: 68px;
+
+        padding: 0 5%;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+
+        padding: 25px 5%;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+      }
+
+      .product-image {
+        height: 160px;
+
+        font-size: 60px;
+      }
+
+      .product-info {
+        padding: 13px;
+      }
+
+      .price {
+        font-size: 18px;
+      }
+
+      .why-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .brand h2 {
+        font-size: 38px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+
+        gap: 8px;
+
+        background: transparent;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        border-radius: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BARRA SUPERIOR
+  ========================= -->
+
+  <div class="top-bar">
+    🚚 Envio para todo o Brasil • 🔒 Compra segura • 💳 Pix e cartão
+  </div>
+
+
+  <!-- =========================
+       CABEÇALHO
+  ========================= -->
+
+  <header>
+
+    <a href="#" class="logo">
+      PLUG<span>UE</span>
+    </a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#sobre">Sobre nós</a>
+    </nav>
+
+    <div class="header-right">
+
+      <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="Buscar produtos..."
+      >
+
+      <button
+        class="cart-button"
+        onclick="mostrarCarrinho()"
+      >
+        🛒
+
+        <span
+          class="cart-number"
+          id="cartNumber"
+        >
+          0
+        </span>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="inicio">
+
+    <div>
+
+      <span class="hero-label">
+        ● BEM-VINDO À PLUGUE
+      </span>
+
+      <h1>
+        Tecnologia que
+        <span>combina</span>
+        com você.
+      </h1>
+
+      <p>
+        Eletrônicos e acessórios selecionados
+        para deixar sua rotina mais prática,
+        conectada e simples.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="#produtos"
+          class="primary-button"
+        >
+          VER PRODUTOS →
+        </a>
+
+        <a
+          href="#sobre"
+          class="secondary-button"
+        >
+          CONHECER A PLUGUE
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="circle"></div>
+
+      <div class="phone">
+
+        <div class="phone-screen">
+
+          <small>
+            PLUGUE
+          </small>
+
+          <strong>
+            Connect.
+          </strong>
+
+        </div>
+
+      </div>
+
+      <div class="floating one">
+        ⚡ Prático & moderno
+      </div>
+
+      <div class="floating two">
+        🔒 Compra segura
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BENEFÍCIOS
+  ========================= -->
+
+  <section class="benefits">
+
+    <div class="benefit">
+
+      <div class="benefit-icon">
+        🚚
+      </div>
+
+      <div>
+        <strong>
+          Envio para todo o Brasil
+        </strong>
+
+        <span>
+          Receba onde estiver.
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <div class="benefit-icon">
+        🔒
+      </div>
+
+      <div>
+        <strong>
+          Compra segura
+        </strong>
+
+        <span>
+          Seus dados protegidos.
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <div class="benefit-icon">
+        💳
+      </div>
+
+      <div>
+        <strong>
+          Pagamento fácil
+        </strong>
+
+        <span>
+          Pix e cartão.
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+      <div class="benefit-icon">
+        💬
+      </div>
+
+      <div>
+        <strong>
+          Atendimento
+        </strong>
+
+        <span>
+          Estamos aqui para ajudar.
+        </span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORIAS
+  ========================= -->
+
+  <section
+    class="section"
+    id="categorias"
+  >
+
+    <h2 class="section-title">
+      Explore a Plugue
+    </h2>
+
+    <p class="section-subtitle">
+      Tecnologia para diferentes momentos do seu dia.
+    </p>
+
+
+    <div class="categories">
+
+      <div class="category">
+
+        <h3>
+          🎧 Áudio
+        </h3>
+
+        <p>
+          Fones e acessórios para
+          acompanhar você onde estiver.
+        </p>
+
+        <a href="#produtos">
+          Ver produtos →
+        </a>
+
+        <div class="category-icon">
+          🎧
+        </div>
+
+      </div>
+
+
+      <div class="category">
+
+        <h3>
+          ⚡ Carregamento
+        </h3>
+
+        <p>
+          Cabos, carregadores e acessórios
+          para manter seus dispositivos conectados.
+        </p>
+
+        <a href="#produtos">
+          Ver produtos →
+        </a>
+
+        <div class="category-icon">
+          ⚡
+        </div>
+
+      </div>
+
+
+      <div class="category">
+
+        <h3>
+          📱 Acessórios
+        </h3>
+
+        <p>
+          Pequenos acessórios que
+          fazem diferença na rotina.
+        </p>
+
+        <a href="#produtos">
+          Ver produtos →
+        </a>
+
+        <div class="category-icon">
+          📱
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRODUTOS
+  ========================= -->
+
+  <section
+    class="section"
+    id="produtos"
+  >
+
+    <h2 class="section-title">
+      ⭐ Destaques da Plugue
+    </h2>
+
+    <p class="section-subtitle">
+      Produtos selecionados para começar.
+    </p>
+
+
+    <div
+      class="products"
+      id="productList"
+    >
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       OFERTA
+  ========================= -->
+
+  <section
+    class="offer"
+    id="ofertas"
+  >
+
+    <div>
+
+      <span class="hero-label">
+        OFERTA DA SEMANA
+      </span>
+
+      <h2>
+        Seu próximo acessório está aqui.
+      </h2>
+
+      <p>
+        Produtos selecionados com condições
+        especiais por tempo limitado.
+      </p>
+
+      <button
+        class="primary-button"
+        onclick="adicionarCarrinho('Fone Bluetooth Plugue X1')"
+      >
+        APROVEITAR OFERTA →
+      </button>
+
+    </div>
+
+    <div class="offer-product">
+      🎧
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SOBRE A PLUGUE
+  ========================= -->
+
+  <section
+    class="why"
+    id="sobre"
+  >
+
+    <div class="why-grid">
+
+      <div>
+
+        <span class="hero-label">
+          POR QUE PLUGUE?
+        </span>
+
+        <h2>
+          Selecionamos.
+          <br>
+          Não simplesmente vendemos.
+        </h2>
+
+        <p>
+          Na Plugue, buscamos produtos que
+          façam sentido para o seu dia a dia,
+          com foco em praticidade, qualidade
+          e preço justo.
+        </p>
+
+      </div>
+
+
+      <div class="why-cards">
+
+        <div class="why-card">
+
+          <strong>
+            ✓ Produtos selecionados
+          </strong>
+
+          <span>
+            Produtos escolhidos pensando
+            em utilidade e experiência.
+          </span>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <strong>
+            ✓ Compra simples
+          </strong>
+
+          <span>
+            Do produto ao pagamento
+            sem complicação.
+          </span>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <strong>
+            ✓ Atendimento
+          </strong>
+
+          <span>
+            Precisou? Estamos aqui
+            para ajudar.
+          </span>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <strong>
+            ✓ Transparência
+          </strong>
+
+          <span>
+            Informações claras sobre
+            produtos e pedidos.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FRASE DA MARCA
+  ========================= -->
+
+  <section class="brand">
+
+    <span class="hero-label">
+      A PLUGUE
+    </span>
+
+    <h2>
+      Conecte-se ao que importa.
+    </h2>
+
+    <p>
+      Tecnologia para facilitar sua rotina,
+      sem complicação. Estamos começando pequeno,
+      mas pensando grande.
+    </p>
+
+    <a
+      href="#produtos"
+      class="primary-button"
+    >
+      CONHEÇA NOSSOS PRODUTOS
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       FAQ
+  ========================= -->
+
+  <section class="section">
+
+    <div class="faq">
+
+      <h2 class="section-title">
+        Perguntas frequentes
+      </h2>
+
+      <p class="section-subtitle">
+        Algumas informações importantes antes da compra.
+      </p>
+
+
+      <details>
+
+        <summary>
+          Qual o prazo de entrega?
+        </summary>
+
+        <p>
+          O prazo varia conforme o endereço
+          de entrega e será informado durante
+          o processo de compra.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Quais formas de pagamento?
+        </summary>
+
+        <p>
+          Trabalharemos com Pix e cartão
+          de crédito.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Como acompanho meu pedido?
+        </summary>
+
+        <p>
+          Após o envio, você receberá as
+          informações necessárias para
+          acompanhar sua entrega.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Posso trocar ou devolver um produto?
+        </summary>
+
+        <p>
+          Sim. As condições e os prazos
+          estarão disponíveis na política
+          de trocas e devoluções da loja.
+        </p>
+
+      </details>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CUPOM
+  ========================= -->
+
+  <section class="newsletter">
+
+    <h2>
+      🎁 Ganhe 10% OFF na primeira compra
+    </h2>
+
+    <p>
+      Cadastre seu e-mail para receber
+      novidades e ofertas da Plugue.
+    </p>
+
+    <form
+      class="newsletter-form"
+      onsubmit="receberCupom(event)"
+    >
+
+      <input
+        type="email"
+        placeholder="Seu melhor e-mail"
+        required
+      >
+
+      <button>
+        RECEBER CUPOM
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          PLUG<span>UE</span>
+        </div>
+
+        <p>
+          Tecnologia que conecta você
+          ao que importa.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          LOJA
+        </h4>
+
+        <a href="#produtos">
+          Produtos
+        </a>
+
+        <a href="#ofertas">
+          Ofertas
+        </a>
+
+        <a href="#categorias">
+          Categorias
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          AJUDA
+        </h4>
+
+        <a href="#">
+          FAQ
+        </a>
+
+        <a href="#">
+          Rastrear pedido
+        </a>
+
+        <a href="#">
+          Trocas e devoluções
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          CONTATO
+        </h4>
+
+        <a href="#">
+          WhatsApp
+        </a>
+
+        <a href="#">
+          Instagram
+        </a>
+
+        <a href="#">
+          E-mail
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Plugue. Todos os direitos reservados.
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       NOTIFICAÇÃO
+  ========================= -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+  </div>
+
+
+  <script>
+
+    /* =========================
+       PRODUTOS
+    ========================= */
+
+    const produtos = [
+
+      {
+        nome: "Fone Bluetooth Plugue X1",
+        preco: 79.90,
+        antigo: 99.90,
+        imagem: "🎧",
+        tag: "DESTAQUE"
+      },
+
+      {
+        nome: "Cabo USB-C Fast Charge",
+        preco: 29.90,
+        antigo: 39.90,
+        imagem: "🔌",
+        tag: "OFERTA"
+      },
+
+      {
+        nome: "Suporte de Celular",
+        preco: 39.90,
+        antigo: 49.90,
+        imagem: "📱",
+        tag: "NOVO"
+      },
+
+      {
+        nome: "Carregador Turbo USB-C",
+        preco: 59.90,
+        antigo: 74.90,
+        imagem: "⚡",
+        tag: "DESTAQUE"
+      }
+
+    ];
+
+
+    /* =========================
+       CARRINHO
+    ========================= */
+
+    let carrinho = 0;
+
+
+    /* =========================
+       FORMATAR PREÇO
+    ========================= */
+
+    function formatarPreco(valor) {
+
+      return valor.toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL"
+        }
+      );
+
+    }
+
+
+    /* =========================
+       MOSTRAR PRODUTOS
+    ========================= */
+
+    function mostrarProdutos(lista = produtos) {
+
+      const container =
+        document.getElementById("productList");
+
+      container.innerHTML = "";
+
+
+      if (lista.length === 0) {
+
+        container.innerHTML = `
+          <p>
+            Nenhum produto encontrado.
+          </p>
+        `;
+
+        return;
+      }
+
+
+      lista.forEach(produto => {
+
+        const card =
+          document.createElement("div");
+
+        card.className = "product";
+
+
+        card.innerHTML = `
+
+          <div class="product-image">
+            ${produto.imagem}
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              ${produto.tag}
+            </span>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <h3>
+              ${produto.nome}
+            </h3>
+
+            <div class="old-price">
+              ${formatarPreco(produto.antigo)}
+            </div>
+
+            <div class="price">
+              ${formatarPreco(produto.preco)}
+            </div>
+
+            <button
+              class="buy"
+              onclick="adicionarCarrinho('${produto.nome}')"
+            >
+              ADICIONAR AO CARRINHO
+            </button>
+
+          </div>
+
+        `;
+
+
+        container.appendChild(card);
+
+      });
+
+    }
+
+
+    /* =========================
+       ADICIONAR AO CARRINHO
+    ========================= */
+
+    function adicionarCarrinho(nome) {
+
+      carrinho++;
+
+
+      document.getElementById(
+        "cartNumber"
+      ).textContent = carrinho;
+
+
+      mostrarMensagem(
+        nome + " foi adicionado ao carrinho!"
+      );
+
+    }
+
+
+    /* =========================
+       ABRIR CARRINHO
+    ========================= */
+
+    function mostrarCarrinho() {
+
+      if (carrinho === 0) {
+
+        mostrarMensagem(
+          "Seu carrinho está vazio."
+        );
+
+        return;
+      }
+
+
+      mostrarMensagem(
+        "Seu carrinho possui " +
+        carrinho +
+        " produto(s)."
+      );
+
+    }
+
+
+    /* =========================
+       NOTIFICAÇÃO
+    ========================= */
+
+    function mostrarMensagem(mensagem) {
+
+      const toast =
+        document.getElementById("toast");
+
+
+      toast.textContent = mensagem;
+
+
+      toast.classList.add("show");
+
+
+      setTimeout(() => {
+
+        toast.classList.remove("show");
+
+      }, 2500);
+
+    }
+
+
+    /* =========================
+       BUSCA
+    ========================= */
+
+    document
+      .getElementById("search")
+      .addEventListener(
+        "input",
+        function () {
+
+          const busca =
+            this.value
+              .toLowerCase()
+              .trim();
+
+
+          const resultados =
+            produtos.filter(produto =>
+
+              produto.nome
+                .toLowerCase()
+                .includes(busca)
+
+            );
+
+
+          mostrarProdutos(
+            busca
+              ? resultados
+              : produtos
+          );
+
+        }
+      );
+
+
+    /* =========================
+       CUPOM
+    ========================= */
+
+    function receberCupom(event) {
+
+      event.preventDefault();
+
+
+      mostrarMensagem(
+        "Seu cupom de 10% foi enviado!"
+      );
+
+
+      event.target.reset();
+
+    }
+
+
+    /* =========================
+       INICIAR
+    ========================= */
+
+    mostrarProdutos();
+
+  </script>
+
+</body>
+</html>
+```
