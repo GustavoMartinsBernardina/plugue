@@ -1,5 +1,5 @@
-```html
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -7,10 +7,11 @@
 
   <title>Plugue | Eletrônicos e Acessórios</title>
 
-  <meta
-    name="description"
-    content="Plugue — eletrônicos e acessórios para deixar sua rotina mais prática."
-  >
+<meta
+name="description"
+content="Plugue — eletrônicos e acessórios para deixar sua rotina mais prática."
+
+>
 
   <style>
     * {
@@ -551,14 +552,6 @@
       font-weight: bold;
     }
 
-    .stars {
-      color: #f59e0b;
-
-      font-size: 12px;
-
-      margin-bottom: 8px;
-    }
-
     .product h3 {
       font-size: 15px;
 
@@ -603,51 +596,32 @@
       background: #2563eb;
     }
 
-    /* =========================
-       OFERTA
-    ========================= */
+    .empty-products {
+      grid-column: 1 / -1;
 
-    .offer {
-      margin: 0 6% 75px;
-
-      padding: 55px 6%;
-
-      border-radius: 25px;
-
-      background: #111;
-
-      color: white;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      align-items: center;
-    }
-
-    .offer h2 {
-      max-width: 550px;
-
-      font-size: 43px;
-
-      letter-spacing: -2px;
-
-      margin: 12px 0;
-    }
-
-    .offer p {
-      max-width: 500px;
-
-      color: #aaa;
-
-      line-height: 1.6;
-
-      margin-bottom: 25px;
-    }
-
-    .offer-product {
       text-align: center;
 
-      font-size: 140px;
+      padding: 60px 20px;
+
+      background: #f8fafc;
+
+      border: 1px dashed #d1d5db;
+
+      border-radius: 18px;
+    }
+
+    .empty-products strong {
+      display: block;
+
+      font-size: 20px;
+
+      margin-bottom: 10px;
+    }
+
+    .empty-products p {
+      color: #777;
+
+      line-height: 1.6;
     }
 
     /* =========================
@@ -729,13 +703,37 @@
     }
 
     .brand p {
-      max-width: 550px;
+      max-width: 600px;
 
       margin: 0 auto 25px;
 
       color: #777;
 
       line-height: 1.7;
+    }
+
+    .resale-notice {
+      max-width: 700px;
+
+      margin: 30px auto 0;
+
+      padding: 18px 22px;
+
+      background: #f5f7fa;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+
+      color: #555;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+    }
+
+    .resale-notice strong {
+      color: #111;
     }
 
     /* =========================
@@ -829,7 +827,170 @@
     }
 
     /* =========================
-       FOOTER
+       ADMIN
+    ========================= */
+
+    .admin-panel {
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 1000;
+
+      background: rgba(0, 0, 0, 0.65);
+
+      padding: 30px;
+
+      overflow-y: auto;
+    }
+
+    .admin-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 30px;
+    }
+
+    .admin-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      margin-bottom: 25px;
+    }
+
+    .admin-header h2 {
+      font-size: 28px;
+    }
+
+    .close-admin {
+      width: 38px;
+      height: 38px;
+
+      border-radius: 9px;
+
+      background: #f3f4f6;
+
+      font-size: 20px;
+    }
+
+    .admin-form {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+
+      margin-bottom: 30px;
+    }
+
+    .admin-form label {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 7px;
+
+      font-size: 12px;
+
+      font-weight: bold;
+    }
+
+    .admin-form input,
+    .admin-form select {
+      padding: 12px;
+
+      border: 1px solid #ddd;
+
+      border-radius: 9px;
+
+      outline: none;
+    }
+
+    .admin-form input:focus,
+    .admin-form select:focus {
+      border-color: #2563eb;
+    }
+
+    .admin-form .full {
+      grid-column: 1 / -1;
+    }
+
+    .admin-products {
+      display: grid;
+
+      gap: 10px;
+    }
+
+    .admin-product {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 15px;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+    }
+
+    .admin-product-info strong {
+      display: block;
+
+      margin-bottom: 4px;
+    }
+
+    .admin-product-info span {
+      color: #777;
+
+      font-size: 12px;
+    }
+
+    .delete-button {
+      padding: 9px 12px;
+
+      background: #fee2e2;
+
+      color: #b91c1c;
+
+      border-radius: 8px;
+
+      font-size: 11px;
+
+      font-weight: bold;
+    }
+
+    .admin-help {
+      padding: 15px;
+
+      margin-bottom: 20px;
+
+      background: #eff6ff;
+
+      border-radius: 10px;
+
+      color: #555;
+
+      font-size: 12px;
+
+      line-height: 1.5;
+    }
+
+    /* =========================
+       RODAPÉ
     ========================= */
 
     footer {
@@ -888,6 +1049,18 @@
       color: white;
     }
 
+    .admin-link {
+      color: #555 !important;
+
+      font-size: 10px !important;
+
+      margin-top: 25px !important;
+    }
+
+    .admin-link:hover {
+      color: #999 !important;
+    }
+
     .copyright {
       padding-top: 20px;
 
@@ -923,7 +1096,7 @@
 
       transition: 0.3s;
 
-      z-index: 500;
+      z-index: 1500;
     }
 
     .toast.show {
@@ -962,14 +1135,6 @@
 
       .products {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .offer {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-product {
-        display: none;
       }
 
       .why-grid {
@@ -1051,726 +1216,715 @@
       .footer-grid {
         grid-template-columns: 1fr;
       }
+
+      .admin-form {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-form .full {
+        grid-column: auto;
+      }
+
+      .admin-panel {
+        padding: 10px;
+      }
+
+      .admin-box {
+        padding: 20px;
+      }
     }
   </style>
+
 </head>
 
 <body>
-
-  <!-- =========================
-       BARRA SUPERIOR
-  ========================= -->
 
   <div class="top-bar">
     🚚 Envio para todo o Brasil • 🔒 Compra segura • 💳 Pix e cartão
   </div>
 
-
-  <!-- =========================
-       CABEÇALHO
-  ========================= -->
-
   <header>
 
-    <a href="#" class="logo">
-      PLUG<span>UE</span>
-    </a>
+```
+<a href="#" class="logo">
+  PLUG<span>UE</span>
+</a>
 
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#categorias">Categorias</a>
-      <a href="#ofertas">Ofertas</a>
-      <a href="#sobre">Sobre nós</a>
-    </nav>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#categorias">Categorias</a>
+  <a href="#sobre">Sobre nós</a>
+</nav>
 
-    <div class="header-right">
+<div class="header-right">
 
-      <input
-        type="text"
-        id="search"
-        class="search"
-        placeholder="Buscar produtos..."
-      >
+  <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="Buscar produtos..."
+  >
 
-      <button
-        class="cart-button"
-        onclick="mostrarCarrinho()"
-      >
-        🛒
+  <button
+    class="cart-button"
+    onclick="mostrarCarrinho()"
+  >
+    🛒
 
-        <span
-          class="cart-number"
-          id="cartNumber"
-        >
-          0
-        </span>
+    <span
+      class="cart-number"
+      id="cartNumber"
+    >
+      0
+    </span>
 
-      </button>
+  </button>
 
-    </div>
+</div>
+```
 
   </header>
 
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
   <section class="hero" id="inicio">
 
-    <div>
+```
+<div>
 
-      <span class="hero-label">
-        ● BEM-VINDO À PLUGUE
-      </span>
+  <span class="hero-label">
+    ● BEM-VINDO À PLUGUE
+  </span>
 
-      <h1>
-        Tecnologia que
-        <span>combina</span>
-        com você.
-      </h1>
+  <h1>
+    Tecnologia que
+    <span>combina</span>
+    com você.
+  </h1>
 
-      <p>
-        Eletrônicos e acessórios selecionados
-        para deixar sua rotina mais prática,
-        conectada e simples.
-      </p>
+  <p>
+    Eletrônicos e acessórios selecionados
+    para deixar sua rotina mais prática,
+    conectada e simples.
+  </p>
 
-      <div class="buttons">
+  <div class="buttons">
 
-        <a
-          href="#produtos"
-          class="primary-button"
-        >
-          VER PRODUTOS →
-        </a>
+    <a
+      href="#produtos"
+      class="primary-button"
+    >
+      VER PRODUTOS →
+    </a>
 
-        <a
-          href="#sobre"
-          class="secondary-button"
-        >
-          CONHECER A PLUGUE
-        </a>
+    <a
+      href="#sobre"
+      class="secondary-button"
+    >
+      CONHECER A PLUGUE
+    </a>
 
-      </div>
+  </div>
 
-    </div>
+</div>
 
 
-    <div class="hero-visual">
+<div class="hero-visual">
 
-      <div class="circle"></div>
+  <div class="circle"></div>
 
-      <div class="phone">
+  <div class="phone">
 
-        <div class="phone-screen">
+    <div class="phone-screen">
 
-          <small>
-            PLUGUE
-          </small>
+      <small>
+        PLUGUE
+      </small>
 
-          <strong>
-            Connect.
-          </strong>
-
-        </div>
-
-      </div>
-
-      <div class="floating one">
-        ⚡ Prático & moderno
-      </div>
-
-      <div class="floating two">
-        🔒 Compra segura
-      </div>
+      <strong>
+        Connect.
+      </strong>
 
     </div>
+
+  </div>
+
+  <div class="floating one">
+    ⚡ Prático & moderno
+  </div>
+
+  <div class="floating two">
+    🔒 Compra segura
+  </div>
+
+</div>
+```
 
   </section>
-
-
-  <!-- =========================
-       BENEFÍCIOS
-  ========================= -->
 
   <section class="benefits">
 
-    <div class="benefit">
+```
+<div class="benefit">
 
-      <div class="benefit-icon">
-        🚚
-      </div>
+  <div class="benefit-icon">
+    🚚
+  </div>
 
-      <div>
-        <strong>
-          Envio para todo o Brasil
-        </strong>
+  <div>
+    <strong>
+      Envio para todo o Brasil
+    </strong>
 
-        <span>
-          Receba onde estiver.
-        </span>
-      </div>
+    <span>
+      Receba onde estiver.
+    </span>
+  </div>
 
-    </div>
-
-
-    <div class="benefit">
-
-      <div class="benefit-icon">
-        🔒
-      </div>
-
-      <div>
-        <strong>
-          Compra segura
-        </strong>
-
-        <span>
-          Seus dados protegidos.
-        </span>
-      </div>
-
-    </div>
+</div>
 
 
-    <div class="benefit">
+<div class="benefit">
 
-      <div class="benefit-icon">
-        💳
-      </div>
+  <div class="benefit-icon">
+    🔒
+  </div>
 
-      <div>
-        <strong>
-          Pagamento fácil
-        </strong>
+  <div>
+    <strong>
+      Compra segura
+    </strong>
 
-        <span>
-          Pix e cartão.
-        </span>
-      </div>
+    <span>
+      Seus dados protegidos.
+    </span>
+  </div>
 
-    </div>
+</div>
 
 
-    <div class="benefit">
+<div class="benefit">
 
-      <div class="benefit-icon">
-        💬
-      </div>
+  <div class="benefit-icon">
+    💳
+  </div>
 
-      <div>
-        <strong>
-          Atendimento
-        </strong>
+  <div>
+    <strong>
+      Pagamento fácil
+    </strong>
 
-        <span>
-          Estamos aqui para ajudar.
-        </span>
-      </div>
+    <span>
+      Pix e cartão.
+    </span>
+  </div>
 
-    </div>
+</div>
+
+
+<div class="benefit">
+
+  <div class="benefit-icon">
+    💬
+  </div>
+
+  <div>
+    <strong>
+      Atendimento
+    </strong>
+
+    <span>
+      Estamos aqui para ajudar.
+    </span>
+  </div>
+
+</div>
+```
 
   </section>
-
-
-  <!-- =========================
-       CATEGORIAS
-  ========================= -->
 
   <section
     class="section"
     id="categorias"
   >
 
-    <h2 class="section-title">
-      Explore a Plugue
-    </h2>
+```
+<h2 class="section-title">
+  Explore a Plugue
+</h2>
 
-    <p class="section-subtitle">
-      Tecnologia para diferentes momentos do seu dia.
+<p class="section-subtitle">
+  Tecnologia para diferentes momentos do seu dia.
+</p>
+
+
+<div class="categories">
+
+  <div class="category">
+
+    <h3>
+      🎧 Áudio
+    </h3>
+
+    <p>
+      Fones e acessórios para
+      acompanhar você onde estiver.
     </p>
 
+    <a href="#produtos">
+      Ver produtos →
+    </a>
 
-    <div class="categories">
-
-      <div class="category">
-
-        <h3>
-          🎧 Áudio
-        </h3>
-
-        <p>
-          Fones e acessórios para
-          acompanhar você onde estiver.
-        </p>
-
-        <a href="#produtos">
-          Ver produtos →
-        </a>
-
-        <div class="category-icon">
-          🎧
-        </div>
-
-      </div>
-
-
-      <div class="category">
-
-        <h3>
-          ⚡ Carregamento
-        </h3>
-
-        <p>
-          Cabos, carregadores e acessórios
-          para manter seus dispositivos conectados.
-        </p>
-
-        <a href="#produtos">
-          Ver produtos →
-        </a>
-
-        <div class="category-icon">
-          ⚡
-        </div>
-
-      </div>
-
-
-      <div class="category">
-
-        <h3>
-          📱 Acessórios
-        </h3>
-
-        <p>
-          Pequenos acessórios que
-          fazem diferença na rotina.
-        </p>
-
-        <a href="#produtos">
-          Ver produtos →
-        </a>
-
-        <div class="category-icon">
-          📱
-        </div>
-
-      </div>
-
+    <div class="category-icon">
+      🎧
     </div>
 
+  </div>
+
+
+  <div class="category">
+
+    <h3>
+      ⚡ Carregamento
+    </h3>
+
+    <p>
+      Cabos, carregadores e acessórios
+      para manter seus dispositivos conectados.
+    </p>
+
+    <a href="#produtos">
+      Ver produtos →
+    </a>
+
+    <div class="category-icon">
+      ⚡
+    </div>
+
+  </div>
+
+
+  <div class="category">
+
+    <h3>
+      📱 Acessórios
+    </h3>
+
+    <p>
+      Pequenos acessórios que
+      fazem diferença na rotina.
+    </p>
+
+    <a href="#produtos">
+      Ver produtos →
+    </a>
+
+    <div class="category-icon">
+      📱
+    </div>
+
+  </div>
+
+</div>
+```
+
   </section>
-
-
-  <!-- =========================
-       PRODUTOS
-  ========================= -->
 
   <section
     class="section"
     id="produtos"
   >
 
-    <h2 class="section-title">
-      ⭐ Destaques da Plugue
-    </h2>
+```
+<h2 class="section-title">
+  ⭐ Produtos da Plugue
+</h2>
 
-    <p class="section-subtitle">
-      Produtos selecionados para começar.
-    </p>
-
-
-    <div
-      class="products"
-      id="productList"
-    >
-    </div>
-
-  </section>
+<p class="section-subtitle">
+  Produtos selecionados para você.
+</p>
 
 
-  <!-- =========================
-       OFERTA
-  ========================= -->
-
-  <section
-    class="offer"
-    id="ofertas"
-  >
-
-    <div>
-
-      <span class="hero-label">
-        OFERTA DA SEMANA
-      </span>
-
-      <h2>
-        Seu próximo acessório está aqui.
-      </h2>
-
-      <p>
-        Produtos selecionados com condições
-        especiais por tempo limitado.
-      </p>
-
-      <button
-        class="primary-button"
-        onclick="adicionarCarrinho('Fone Bluetooth Plugue X1')"
-      >
-        APROVEITAR OFERTA →
-      </button>
-
-    </div>
-
-    <div class="offer-product">
-      🎧
-    </div>
+<div
+  class="products"
+  id="productList"
+>
+</div>
+```
 
   </section>
-
-
-  <!-- =========================
-       SOBRE A PLUGUE
-  ========================= -->
 
   <section
     class="why"
     id="sobre"
   >
 
-    <div class="why-grid">
+```
+<div class="why-grid">
 
-      <div>
-
-        <span class="hero-label">
-          POR QUE PLUGUE?
-        </span>
-
-        <h2>
-          Selecionamos.
-          <br>
-          Não simplesmente vendemos.
-        </h2>
-
-        <p>
-          Na Plugue, buscamos produtos que
-          façam sentido para o seu dia a dia,
-          com foco em praticidade, qualidade
-          e preço justo.
-        </p>
-
-      </div>
-
-
-      <div class="why-cards">
-
-        <div class="why-card">
-
-          <strong>
-            ✓ Produtos selecionados
-          </strong>
-
-          <span>
-            Produtos escolhidos pensando
-            em utilidade e experiência.
-          </span>
-
-        </div>
-
-
-        <div class="why-card">
-
-          <strong>
-            ✓ Compra simples
-          </strong>
-
-          <span>
-            Do produto ao pagamento
-            sem complicação.
-          </span>
-
-        </div>
-
-
-        <div class="why-card">
-
-          <strong>
-            ✓ Atendimento
-          </strong>
-
-          <span>
-            Precisou? Estamos aqui
-            para ajudar.
-          </span>
-
-        </div>
-
-
-        <div class="why-card">
-
-          <strong>
-            ✓ Transparência
-          </strong>
-
-          <span>
-            Informações claras sobre
-            produtos e pedidos.
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FRASE DA MARCA
-  ========================= -->
-
-  <section class="brand">
+  <div>
 
     <span class="hero-label">
-      A PLUGUE
+      POR QUE PLUGUE?
     </span>
 
     <h2>
-      Conecte-se ao que importa.
+      Selecionamos.
+      <br>
+      Não simplesmente vendemos.
     </h2>
 
     <p>
-      Tecnologia para facilitar sua rotina,
-      sem complicação. Estamos começando pequeno,
-      mas pensando grande.
+      Na Plugue, buscamos produtos que
+      façam sentido para o seu dia a dia,
+      com foco em praticidade, qualidade
+      e preço justo.
     </p>
 
-    <a
-      href="#produtos"
-      class="primary-button"
-    >
-      CONHEÇA NOSSOS PRODUTOS
-    </a>
+    <div class="resale-notice">
+
+      <strong>
+        Sobre nossos produtos:
+      </strong>
+
+      A Plugue não fabrica os produtos
+      vendidos na loja. Nós compramos
+      produtos de fornecedores e parceiros
+      e fazemos a revenda para nossos clientes.
+
+    </div>
+
+  </div>
+
+
+  <div class="why-cards">
+
+    <div class="why-card">
+
+      <strong>
+        ✓ Produtos selecionados
+      </strong>
+
+      <span>
+        Produtos escolhidos pensando
+        em utilidade e experiência.
+      </span>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <strong>
+        ✓ Compra simples
+      </strong>
+
+      <span>
+        Do produto ao pagamento
+        sem complicação.
+      </span>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <strong>
+        ✓ Atendimento
+      </strong>
+
+      <span>
+        Precisou? Estamos aqui
+        para ajudar.
+      </span>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <strong>
+        ✓ Transparência
+      </strong>
+
+      <span>
+        Informações claras sobre
+        produtos e pedidos.
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+```
 
   </section>
 
+  <section class="brand">
 
-  <!-- =========================
-       FAQ
-  ========================= -->
+```
+<span class="hero-label">
+  A PLUGUE
+</span>
+
+<h2>
+  Conecte-se ao que importa.
+</h2>
+
+<p>
+  Tecnologia para facilitar sua rotina,
+  sem complicação. Estamos começando pequeno,
+  mas pensando grande.
+</p>
+
+<a
+  href="#produtos"
+  class="primary-button"
+>
+  CONHEÇA NOSSOS PRODUTOS
+</a>
+
+<div class="resale-notice">
+
+  <strong>
+    Transparência Plugue:
+  </strong>
+
+  somos uma loja de revenda.
+  Os produtos são adquiridos de fornecedores
+  e revendidos pela Plugue.
+
+</div>
+```
+
+  </section>
 
   <section class="section">
 
-    <div class="faq">
+```
+<div class="faq">
 
-      <h2 class="section-title">
-        Perguntas frequentes
-      </h2>
+  <h2 class="section-title">
+    Perguntas frequentes
+  </h2>
 
-      <p class="section-subtitle">
-        Algumas informações importantes antes da compra.
-      </p>
-
-
-      <details>
-
-        <summary>
-          Qual o prazo de entrega?
-        </summary>
-
-        <p>
-          O prazo varia conforme o endereço
-          de entrega e será informado durante
-          o processo de compra.
-        </p>
-
-      </details>
+  <p class="section-subtitle">
+    Algumas informações importantes antes da compra.
+  </p>
 
 
-      <details>
+  <details>
 
-        <summary>
-          Quais formas de pagamento?
-        </summary>
+    <summary>
+      Qual o prazo de entrega?
+    </summary>
 
-        <p>
-          Trabalharemos com Pix e cartão
-          de crédito.
-        </p>
+    <p>
+      O prazo varia conforme o endereço
+      de entrega e será informado durante
+      o processo de compra.
+    </p>
 
-      </details>
-
-
-      <details>
-
-        <summary>
-          Como acompanho meu pedido?
-        </summary>
-
-        <p>
-          Após o envio, você receberá as
-          informações necessárias para
-          acompanhar sua entrega.
-        </p>
-
-      </details>
+  </details>
 
 
-      <details>
+  <details>
 
-        <summary>
-          Posso trocar ou devolver um produto?
-        </summary>
+    <summary>
+      Quais formas de pagamento?
+    </summary>
 
-        <p>
-          Sim. As condições e os prazos
-          estarão disponíveis na política
-          de trocas e devoluções da loja.
-        </p>
+    <p>
+      Trabalharemos com Pix e cartão
+      de crédito.
+    </p>
 
-      </details>
+  </details>
 
-    </div>
+
+  <details>
+
+    <summary>
+      Os produtos são fabricados pela Plugue?
+    </summary>
+
+    <p>
+      Não. A Plugue trabalha com revenda.
+      Os produtos são comprados de fornecedores
+      e parceiros e depois disponibilizados
+      para nossos clientes.
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Como acompanho meu pedido?
+    </summary>
+
+    <p>
+      Após o envio, você receberá as
+      informações necessárias para
+      acompanhar sua entrega.
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      Posso trocar ou devolver um produto?
+    </summary>
+
+    <p>
+      Sim. As condições e os prazos
+      estarão disponíveis na política
+      de trocas e devoluções da loja.
+    </p>
+
+  </details>
+
+</div>
+```
 
   </section>
-
-
-  <!-- =========================
-       CUPOM
-  ========================= -->
 
   <section class="newsletter">
 
-    <h2>
-      🎁 Ganhe 10% OFF na primeira compra
-    </h2>
+```
+<h2>
+  🎁 Ganhe 10% OFF na primeira compra
+</h2>
 
-    <p>
-      Cadastre seu e-mail para receber
-      novidades e ofertas da Plugue.
-    </p>
+<p>
+  Cadastre seu e-mail para receber
+  novidades e ofertas da Plugue.
+</p>
 
-    <form
-      class="newsletter-form"
-      onsubmit="receberCupom(event)"
-    >
+<form
+  class="newsletter-form"
+  onsubmit="receberCupom(event)"
+>
 
-      <input
-        type="email"
-        placeholder="Seu melhor e-mail"
-        required
-      >
+  <input
+    type="email"
+    placeholder="Seu melhor e-mail"
+    required
+  >
 
-      <button>
-        RECEBER CUPOM
-      </button>
+  <button>
+    RECEBER CUPOM
+  </button>
 
-    </form>
+</form>
+```
 
   </section>
 
-
-  <!-- =========================
-       RODAPÉ
-  ========================= -->
-
   <footer>
 
-    <div class="footer-grid">
+```
+<div class="footer-grid">
 
-      <div>
+  <div>
 
-        <div class="footer-logo">
-          PLUG<span>UE</span>
-        </div>
-
-        <p>
-          Tecnologia que conecta você
-          ao que importa.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          LOJA
-        </h4>
-
-        <a href="#produtos">
-          Produtos
-        </a>
-
-        <a href="#ofertas">
-          Ofertas
-        </a>
-
-        <a href="#categorias">
-          Categorias
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          AJUDA
-        </h4>
-
-        <a href="#">
-          FAQ
-        </a>
-
-        <a href="#">
-          Rastrear pedido
-        </a>
-
-        <a href="#">
-          Trocas e devoluções
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          CONTATO
-        </h4>
-
-        <a href="#">
-          WhatsApp
-        </a>
-
-        <a href="#">
-          Instagram
-        </a>
-
-        <a href="#">
-          E-mail
-        </a>
-
-      </div>
-
+    <div class="footer-logo">
+      PLUG<span>UE</span>
     </div>
 
+    <p>
+      Tecnologia que conecta você
+      ao que importa.
+    </p>
 
-    <div class="copyright">
-      © 2026 Plugue. Todos os direitos reservados.
-    </div>
+    <p>
+      A Plugue trabalha com produtos
+      adquiridos de fornecedores e
+      revendidos aos consumidores.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h4>
+      LOJA
+    </h4>
+
+    <a href="#produtos">
+      Produtos
+    </a>
+
+    <a href="#categorias">
+      Categorias
+    </a>
+
+  </div>
+
+
+  <div>
+
+    <h4>
+      AJUDA
+    </h4>
+
+    <a href="#">
+      FAQ
+    </a>
+
+    <a href="#">
+      Rastrear pedido
+    </a>
+
+    <a href="#">
+      Trocas e devoluções
+    </a>
+
+  </div>
+
+
+  <div>
+
+    <h4>
+      CONTATO
+    </h4>
+
+    <a href="#">
+      WhatsApp
+    </a>
+
+    <a href="#">
+      Instagram
+    </a>
+
+    <a href="#">
+      E-mail
+    </a>
+
+  </div>
+
+</div>
+
+
+<a
+  href="#"
+  class="admin-link"
+  onclick="abrirAdmin(event)"
+>
+  Área administrativa
+</a>
+
+
+<div class="copyright">
+  © 2026 Plugue. Todos os direitos reservados.
+</div>
+```
 
   </footer>
-
-
-  <!-- =========================
-       NOTIFICAÇÃO
-  ========================= -->
 
   <div
     class="toast"
@@ -1778,6 +1932,173 @@
   >
   </div>
 
+  <!-- =========================
+       ÁREA ADMINISTRATIVA
+  ========================= -->
+
+  <div
+    class="admin-panel"
+    id="adminPanel"
+  >
+
+```
+<div class="admin-box">
+
+  <div class="admin-header">
+
+    <h2>
+      Painel da Plugue
+    </h2>
+
+    <button
+      class="close-admin"
+      onclick="fecharAdmin()"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <div class="admin-help">
+
+    <strong>
+      Área exclusiva do administrador.
+    </strong>
+
+    Cadastre aqui os produtos que deseja
+    anunciar na loja. Eles aparecerão
+    automaticamente na seção de produtos.
+
+  </div>
+
+
+  <form
+    class="admin-form"
+    onsubmit="cadastrarProduto(event)"
+  >
+
+    <label>
+      Nome do produto
+
+      <input
+        type="text"
+        id="adminNome"
+        placeholder="Ex: Fone Bluetooth"
+        required
+      >
+
+    </label>
+
+
+    <label>
+      Categoria
+
+      <select
+        id="adminCategoria"
+        required
+      >
+
+        <option value="">
+          Selecione
+        </option>
+
+        <option value="Áudio">
+          Áudio
+        </option>
+
+        <option value="Carregamento">
+          Carregamento
+        </option>
+
+        <option value="Acessórios">
+          Acessórios
+        </option>
+
+      </select>
+
+    </label>
+
+
+    <label>
+      Preço
+
+      <input
+        type="number"
+        id="adminPreco"
+        placeholder="79.90"
+        step="0.01"
+        min="0"
+        required
+      >
+
+    </label>
+
+
+    <label>
+      Preço antigo (opcional)
+
+      <input
+        type="number"
+        id="adminAntigo"
+        placeholder="99.90"
+        step="0.01"
+        min="0"
+      >
+
+    </label>
+
+
+    <label>
+      Etiqueta
+
+      <input
+        type="text"
+        id="adminTag"
+        placeholder="NOVO, OFERTA, DESTAQUE..."
+      >
+
+    </label>
+
+
+    <label>
+      Imagem
+
+      <input
+        type="text"
+        id="adminImagem"
+        placeholder="Emoji ou URL da imagem"
+        required
+      >
+
+    </label>
+
+
+    <button
+      type="submit"
+      class="primary-button full"
+    >
+      + ADICIONAR PRODUTO
+    </button>
+
+  </form>
+
+
+  <h3 style="margin-bottom:15px;">
+    Produtos cadastrados
+  </h3>
+
+
+  <div
+    class="admin-products"
+    id="adminProducts"
+  >
+  </div>
+
+</div>
+```
+
+  </div>
 
   <script>
 
@@ -1785,41 +2106,10 @@
        PRODUTOS
     ========================= */
 
-    const produtos = [
-
-      {
-        nome: "Fone Bluetooth Plugue X1",
-        preco: 79.90,
-        antigo: 99.90,
-        imagem: "🎧",
-        tag: "DESTAQUE"
-      },
-
-      {
-        nome: "Cabo USB-C Fast Charge",
-        preco: 29.90,
-        antigo: 39.90,
-        imagem: "🔌",
-        tag: "OFERTA"
-      },
-
-      {
-        nome: "Suporte de Celular",
-        preco: 39.90,
-        antigo: 49.90,
-        imagem: "📱",
-        tag: "NOVO"
-      },
-
-      {
-        nome: "Carregador Turbo USB-C",
-        preco: 59.90,
-        antigo: 74.90,
-        imagem: "⚡",
-        tag: "DESTAQUE"
-      }
-
-    ];
+    let produtos =
+      JSON.parse(
+        localStorage.getItem("plugueProdutos")
+      ) || [];
 
 
     /* =========================
@@ -1835,12 +2125,26 @@
 
     function formatarPreco(valor) {
 
-      return valor.toLocaleString(
+      return Number(valor).toLocaleString(
         "pt-BR",
         {
           style: "currency",
           currency: "BRL"
         }
+      );
+
+    }
+
+
+    /* =========================
+       SALVAR PRODUTOS
+    ========================= */
+
+    function salvarProdutos() {
+
+      localStorage.setItem(
+        "plugueProdutos",
+        JSON.stringify(produtos)
       );
 
     }
@@ -1861,16 +2165,28 @@
       if (lista.length === 0) {
 
         container.innerHTML = `
-          <p>
-            Nenhum produto encontrado.
-          </p>
+
+          <div class="empty-products">
+
+            <strong>
+              Ainda não temos produtos anunciados.
+            </strong>
+
+            <p>
+              Em breve teremos novidades.
+              Volte novamente para conferir
+              os produtos disponíveis na Plugue.
+            </p>
+
+          </div>
+
         `;
 
         return;
       }
 
 
-      lista.forEach(produto => {
+      lista.forEach((produto, index) => {
 
         const card =
           document.createElement("div");
@@ -1878,29 +2194,54 @@
         card.className = "product";
 
 
+        let imagemHTML = produto.imagem;
+
+
+        if (
+          produto.imagem.startsWith("http://") ||
+          produto.imagem.startsWith("https://")
+        ) {
+
+          imagemHTML = `
+            <img
+              src="${produto.imagem}"
+              alt="${produto.nome}"
+              style="
+                width:100%;
+                height:100%;
+                object-fit:contain;
+              "
+            >
+          `;
+
+        }
+
+
         card.innerHTML = `
 
           <div class="product-image">
-            ${produto.imagem}
+            ${imagemHTML}
           </div>
 
           <div class="product-info">
 
             <span class="tag">
-              ${produto.tag}
+              ${produto.tag || produto.categoria}
             </span>
-
-            <div class="stars">
-              ★★★★★
-            </div>
 
             <h3>
               ${produto.nome}
             </h3>
 
-            <div class="old-price">
-              ${formatarPreco(produto.antigo)}
-            </div>
+            ${
+              produto.antigo
+                ? `
+                  <div class="old-price">
+                    ${formatarPreco(produto.antigo)}
+                  </div>
+                `
+                : ""
+            }
 
             <div class="price">
               ${formatarPreco(produto.preco)}
@@ -1908,7 +2249,7 @@
 
             <button
               class="buy"
-              onclick="adicionarCarrinho('${produto.nome}')"
+              onclick="adicionarCarrinho('${produto.nome.replace(/'/g, "\\'")}')"
             >
               ADICIONAR AO CARRINHO
             </button>
@@ -2052,6 +2393,251 @@
 
 
     /* =========================
+       ABRIR ADMIN
+    ========================= */
+
+    function abrirAdmin(event) {
+
+      event.preventDefault();
+
+
+      const senha =
+        prompt(
+          "Digite a senha de administrador:"
+        );
+
+
+      /*
+        IMPORTANTE:
+        Esta senha serve apenas para
+        testes. Em um site publicado,
+        ela não é uma proteção real.
+      */
+
+      if (senha === "PLUGUE2026") {
+
+        document.getElementById(
+          "adminPanel"
+        ).style.display = "block";
+
+
+        mostrarAdminProdutos();
+
+      } else {
+
+        mostrarMensagem(
+          "Senha incorreta."
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       FECHAR ADMIN
+    ========================= */
+
+    function fecharAdmin() {
+
+      document.getElementById(
+        "adminPanel"
+      ).style.display = "none";
+
+    }
+
+
+    /* =========================
+       CADASTRAR PRODUTO
+    ========================= */
+
+    function cadastrarProduto(event) {
+
+      event.preventDefault();
+
+
+      const nome =
+        document.getElementById(
+          "adminNome"
+        ).value.trim();
+
+
+      const categoria =
+        document.getElementById(
+          "adminCategoria"
+        ).value;
+
+
+      const preco =
+        Number(
+          document.getElementById(
+            "adminPreco"
+          ).value
+        );
+
+
+      const antigo =
+        Number(
+          document.getElementById(
+            "adminAntigo"
+          ).value
+        ) || null;
+
+
+      const tag =
+        document.getElementById(
+          "adminTag"
+        ).value.trim()
+        || "DESTAQUE";
+
+
+      const imagem =
+        document.getElementById(
+          "adminImagem"
+        ).value.trim();
+
+
+      const novoProduto = {
+
+        nome: nome,
+
+        categoria: categoria,
+
+        preco: preco,
+
+        antigo: antigo,
+
+        imagem: imagem,
+
+        tag: tag
+
+      };
+
+
+      produtos.push(novoProduto);
+
+
+      salvarProdutos();
+
+      mostrarProdutos();
+
+      mostrarAdminProdutos();
+
+
+      event.target.reset();
+
+
+      mostrarMensagem(
+        "Produto anunciado com sucesso!"
+      );
+
+    }
+
+
+    /* =========================
+       MOSTRAR PRODUTOS NO ADMIN
+    ========================= */
+
+    function mostrarAdminProdutos() {
+
+      const container =
+        document.getElementById(
+          "adminProducts"
+        );
+
+
+      container.innerHTML = "";
+
+
+      if (produtos.length === 0) {
+
+        container.innerHTML = `
+          <p style="color:#777;">
+            Nenhum produto cadastrado ainda.
+          </p>
+        `;
+
+        return;
+
+      }
+
+
+      produtos.forEach((produto, index) => {
+
+        const item =
+          document.createElement("div");
+
+        item.className =
+          "admin-product";
+
+
+        item.innerHTML = `
+
+          <div class="admin-product-info">
+
+            <strong>
+              ${produto.nome}
+            </strong>
+
+            <span>
+              ${formatarPreco(produto.preco)}
+              • ${produto.categoria}
+            </span>
+
+          </div>
+
+          <button
+            class="delete-button"
+            onclick="excluirProduto(${index})"
+          >
+            EXCLUIR
+          </button>
+
+        `;
+
+
+        container.appendChild(item);
+
+      });
+
+    }
+
+
+    /* =========================
+       EXCLUIR PRODUTO
+    ========================= */
+
+    function excluirProduto(index) {
+
+      const confirmar =
+        confirm(
+          "Tem certeza que deseja excluir este produto?"
+        );
+
+
+      if (!confirmar) {
+        return;
+      }
+
+
+      produtos.splice(index, 1);
+
+
+      salvarProdutos();
+
+      mostrarProdutos();
+
+      mostrarAdminProdutos();
+
+
+      mostrarMensagem(
+        "Produto removido."
+      );
+
+    }
+
+
+    /* =========================
        INICIAR
     ========================= */
 
@@ -2061,4 +2647,3 @@
 
 </body>
 </html>
-```
